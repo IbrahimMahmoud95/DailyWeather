@@ -1,0 +1,165 @@
+*{
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+@font-face {
+    font-family: "Shenttpuro";
+    src: url(../webfonts/Shenttpuro-Font.ttf);
+}
+@font-face {
+    font-family: "Midorima";
+    src: url(../webfonts/Midorima-PersonalUse-Regular.ttf);
+}
+:root{
+    --MainTextColor:#ba131a;
+    --SeconderyTextColor:#D5D5D5;
+    --SeconderyTextColorDark-1:#bababa;
+    --SeconderyTextColorDark-2:#989898;
+    --MainPageColor:#011728;
+    --SeconderyPageColor:#002139;
+    --MainFontFamily:"Shenttpuro";
+    --SeconderyFontFamily:"Midorima";
+}
+::selection{
+    background-color: var(--MainTextColor);
+    color: var(--SeconderyTextColor);
+}
+body{
+    font-family: var(--MainFontFamily);
+}
+/* NavBar */
+nav{
+    background-color: var(--MainPageColor);
+}
+
+a[class="navbar-brand fs-2"],.nav-item a{
+    color: var(--SeconderyTextColor) !important
+}
+a[class="navbar-brand fs-2"]:hover{
+    color: var(--SeconderyTextColor);
+}
+.nav-item{
+    margin-left: 1rem;
+}
+div[class="collapse navbar-collapse"]{
+    margin-left: 20rem;
+}
+.navbar-nav .nav-link{
+    padding: 7px 30px !important;
+}
+.navbar-nav .nav-link.active,.navbar-nav .nav-link.show,.navbar-nav .nav-link:hover{
+    color: var(--MainTextColor)!important;
+    border:  3px solid var(--MainTextColor);
+    border-radius: 25px;
+}
+/* Heading Sec. */
+section[class="Heading"]{
+background-image:linear-gradient(rgba(0,33,57,0.1),rgba(0,33,57,0.3)),url(../imgs/banner2.png);
+background-repeat: no-repeat;
+background-position: center top;
+background-size: contain;
+background-color:var(--SeconderyPageColor);
+}
+section .Part1{
+    padding: 4rem 0rem;
+}
+.InputField{
+    background-color: var(--MainPageColor);
+    border-radius: 30px;
+}
+
+.Red{
+    color: var(--MainTextColor);
+}
+.InputField input::placeholder,.InputField input:focus{
+    color: var(--SeconderyTextColor);
+    font-size: large;
+    font-family: var(--SeconderyFontFamily);
+}
+.InputField input:focus{
+    background-color: transparent !important;
+    box-shadow:none;
+    outline: none;
+    border: none;
+}
+.form-control{
+    background-color: transparent;
+    border-color: transparent;
+    border-radius: 30px;
+}
+.InputField button{
+    border-radius: 30px;
+}
+.card-group{
+    font-family: var(--SeconderyFontFamily);
+}
+.card{
+    background-color: var(--SeconderyTextColor);
+}
+.card-header{
+    background-color: var(--SeconderyTextColorDark-1);
+}
+.card:nth-child(2){
+    background-color: var(--SeconderyTextColorDark-1);
+}
+.card:nth-child(2) .card-header,.card:nth-child(2) .card-footer{
+    background-color: var(--SeconderyTextColorDark-2);
+}
+h2[class="card-text d-inline-block Red"]{
+    font-size: 5rem;
+}
+div[class="d-flex"] img{
+    width: 100px;
+    height: 100px;
+}
+/* Footer */
+footer{
+    background-color: var(--MainPageColor);
+}
+footer a,footer p{
+    font-family: var(--SeconderyFontFamily);
+    color: var(--SeconderyTextColorDark-1);
+}
+footer a{
+    text-decoration: none;
+}
+footer .InputField{
+    background-color: var(--SeconderyTextColorDark-1);
+}
+footer .InputField input::placeholder,footer .InputField input:focus{
+    color: var(--MainTextColor);
+}
+.w-65{
+    width: 65%;
+}
+.IconBackGround{
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background-color: var(--SeconderyTextColorDark-1);
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+.IconBackGround .Icon{
+    color: var(--MainTextColor);
+    transition: 0.3s ease-in-out;
+}
+.IconBackGround:hover{
+    background-color: var(--MainTextColor);
+}
+.IconBackGround:hover.IconBackGround .Icon{
+    color: var(--SeconderyTextColorDark-1);
+}
+.Last span,.Last a{
+    color: var(--MainTextColor);
+    font-family: var(--MainFontFamily);
+}
+
+
+
+
+
+
+

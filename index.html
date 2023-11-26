@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="temperature">
+    <meta name="description" content="get temperature status at any location">
+    <link rel="icon" href="./imgs/icon.png" type="shourtcut x-icon">
+    <link rel="stylesheet" href="./css/all.min.css">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Susanoo</title>
+</head>
+
+<body>
+    <!-- Nav Bar -->
+    <nav class="navbar navbar-expand-lg p-2">
+        <div class="container-fluid">
+            <a class="navbar-brand fs-2" href="#">
+                <img src="./imgs/FinalLogo.png" alt="Logo" width="120" height="80"
+                    class="d-inline-block align-text-top pb-2">
+                Susanoo
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse " id="navbarSupportedContent">
+                <ul class="navbar-nav mx-md-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">News</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Live Cameras</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Photos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Heading Sec. -->
+    <section class="Heading">
+        <div class="Part1">
+            <div class="InputField   container  py-1 px-0 clearfix">
+                <input type="text" class="form-control  w-90 w-75 float-start" placeholder="Find Your Location">
+                <button type="button" id="SearchBtn" class="btn btn-outline-danger px-4 me-1 float-end">Find</button>
+            </div>
+        </div>
+        <div class="card-group container pb-5">
+            <div class="card" id="Card1">
+                <div class="card-header clearfix pb-0 border border-0">
+                    <p class="float-start Red" id="Day"></p>
+                    <div class="float-end Red">
+                        <p class="mx-1 d-inline-block" id="DayNum"></p>
+                        <p class="d-inline-block" id="Month"></p>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <h3 class="card-title fs-2 "></h3>
+                    <h4></h4>
+                    <div class="d-flex  justify-content-between">
+                        <h2 class="card-text d-inline-block Red"></h2>
+                        <img src="" width="100px" height="80px">
+                    </div>
+                    <p class="WeatherDesc fs-5"></p>
+                </div>
+                <div class="card-footer  border border-0 ">
+                    <div class="w-100 d-flex justify-content-between">
+                        <span class="w-25"><img src="./imgs/icon-umberella.png" alt="Humi"> <span
+                                class="Humidity"></span></span>
+                        <span class="w-50"><img src="./imgs/icon-wind.png" alt="Wind Sp"> <span
+                                class="WindSpeed"></span></span>
+                        <span class="w-25"><img src="./imgs/icon-compass.png" alt="Wind Dir"> <span
+                                class="WindDirection"></span></span>
+                    </div>
+                </div>
+            </div>
+            <div class="card" id="Card2">
+                <div class="card-header clearfix pb-0 border border-0">
+                    <p class="float-start Red Day"></p>
+                    <div class="float-end Red">
+                        <p class="DayNum mx-1 d-inline-block"></p>
+                        <p class="Month d-inline-block"></p>
+                    </div>
+                </div>
+                <div class="card-body mx-auto">
+                    <div class="d-flex  flex-column">
+                        <h2 class="card-text d-block Red opacity-100" id="MaxTemp"></h2>
+                        <h2 class="card-text d-block Red opacity-100" id="MinTemp"></h2>
+                        <img src="" width="100px" height="80px">
+                    </div>
+                    <p class="WeatherDesc fs-5"></p>
+                </div>
+                <div class="card-footer  border border-0 ">
+                    <div class="w-100 d-flex justify-content-lg-between">
+                        <span class="w-25"><img src="./imgs/icon-umberella.png" alt="Humi"> <span
+                                class="Humidity"></span></span>
+                        <span class="w-50"><img src="./imgs/icon-wind.png" alt="Wind Sp"> <span
+                                class="WindSpeed"></span></span>
+                        <span class="w-25"><img src="./imgs/icon-compass.png" alt="Wind Dir"> <span
+                                class="WindDirection"></span></span>
+                    </div>
+                </div>
+            </div>
+            <div class="card" id="Card3">
+                <div class="card-header clearfix pb-0 border border-0">
+                    <p class="float-start Red Day"></p>
+                    <div class="float-end Red">
+                        <p class="DayNum mx-1 d-inline-block"></p>
+                        <p class="Month d-inline-block"></p>
+                    </div>
+                </div>
+                <div class="card-body mx-auto">
+                    <div class="d-flex  flex-column">
+                        <h2 class="card-text d-inline-block Red opacity-100" id="MaxTemp"></h2>
+                        <h2 class="card-text d-inline-block Red opacity-100" id="MinTemp"></h2>
+                        <img src="" width="100px" height="80px">
+                    </div>
+                    <p class="WeatherDesc fs-5"></p>
+                </div>
+                <div class="card-footer  border border-0 ">
+                    <div class="w-100 d-flex justify-content-lg-between">
+                        <span class="w-25"><img src="./imgs/icon-umberella.png" alt="Humi"> <span
+                                class="Humidity"></span></span>
+                        <span class="w-50"><img src="./imgs/icon-wind.png" alt="Wind Sp"> <span
+                                class="WindSpeed"></span></span>
+                        <span class="w-25"><img src="./imgs/icon-compass.png" alt="Wind Dir"> <span
+                                class="WindDirection"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+    <!-- Footer -->
+    <footer>
+        <div class="row g-2 container  mx-auto ">
+            <div class="col-lg-8 col-sm-12">
+                <div class="">
+                    <div class="InputField d-flex p-1">
+                        <input type="text" name="UserMail" class="form-control"
+                            placeholder="Enter Your E-Mail To Subscribe">
+                        <button type="button" id="SearchBtn" class="btn btn-outline-danger  ">Subscribe</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-12 mb-2 ">
+                <div class=" w-75 ms-auto">
+                    <div class="d-flex flex-row justify-content-md-evenly ">
+                        <div class="IconBackGround position-relative">
+                            <a href="#"><i
+                                    class="Icon fa-brands fa-facebook-f fa-fw fs-2 position-absolute start-50 top-50 translate-middle"></i></a>
+                        </div>
+                        <div class="IconBackGround position-relative">
+                            <a href="#"></a><i
+                                class="Icon fa-brands fa-brands fa-twitter fa-fw fs-2 position-absolute start-50 top-50 translate-middle"></i></a>
+                        </div>
+                        <div class="IconBackGround position-relative">
+                            <a href="#"></a><i
+                                class="Icon fa fa-brands fa-google-plus-g fa-fw fs-2 position-absolute start-50 top-50 translate-middle"></i></a>
+                        </div>
+                        <div class="IconBackGround position-relative">
+                            <a href="#"></a><i
+                                class="Icon fa-brands fa-pinterest fa-fw fs-2 position-absolute start-50 top-50 translate-middle"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container Last fs-4 d-md-flex flex-md-column">
+            <p> Copyright &copy; 2023 Route Academy, Designed By <span> Ibrahim</span></p>
+            <p> Powerd By
+                <a href="https://www.weatherapi.com/" target="_blank" title="Free Weather API">WeatherAPI.com</a>
+            </p>
+        </div>
+    </footer>
+    <script src="./js/all.min.js"></script>
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="./js/index.js"></script>
+</body>
+
+</html>
